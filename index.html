@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Manager</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (hidden until login) -->
+  <nav id="navbar" class="navbar hidden">
+    <div class="nav-brand">📋 ProjectHub</div>
+    <div class="nav-links">
+      <a href="#" onclick="navigate('dashboard')">Dashboard</a>
+      <a href="#" onclick="navigate('projects')" id="nav-projects">Projects</a>
+    </div>
+    <div class="nav-user">
+      <span id="nav-username"></span>
+      <button onclick="logout()" class="btn-logout">Logout</button>
+    </div>
+  </nav>
+
+  <!-- MAIN APP CONTAINER -->
+  <div id="app"></div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules/api.js"></script>
+  <script src="js/modules/auth.js"></script>
+  <script src="js/modules/session.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
